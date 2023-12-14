@@ -75,4 +75,5 @@ for(i=0;i<arr.length;i++){
             val=arr[i];
         }
 }
+
 console.log(val,answer);
