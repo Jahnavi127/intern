@@ -135,3 +135,58 @@ for(i=0;i<a.length;i++){
     }
 }
 console.log(ans);
+//13
+var flatten = function(a, shallow,r){
+    if(!r){ r = []}
+     
+  if (shallow) {
+    return r.concat.apply(r,a);
+    }
+        
+     for(var i=0; i<a.length; i++){
+          if(a[i].constructor == Array){
+              flatten(a[i],shallow,r);
+          }else{
+              r.push(a[i]);
+          }
+      }
+      return r;
+  }
+  
+  console.log(flatten([1, [2], [3, [[4]]],[5,6]]));
+  
+  console.log(flatten([1, [2], [3, [[4]]],[5,6]], true));
+let difference=(a1,a2)=>{
+    ans=[]
+    a1=a1.toString().split(",").map(Number);
+    a2=a2.toString().split(",").map(Number);
+    for(i of a1){
+        if(a2.indexOf(i)===-1){
+            ans.push(i)
+        }
+    }
+    for(i of a2){
+        if(a1.indexOf(i)===-1){
+            ans.push(i)
+        }
+    }
+    return ans;
+}
+console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
+console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+var library = [ 
+    { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+    { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+    { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+    ];
+let compare=(x,y)=>{
+    if(x.title>y.title){
+        return 1;
+    }
+    if(x.title<y.title){
+        return -1;
+    }
+    return 0;
+}
+console.log(library.sort(compare));
