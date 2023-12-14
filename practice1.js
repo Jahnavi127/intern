@@ -192,3 +192,22 @@ let compare=(x,y)=>{
     return 0;
 }
 console.log(library.sort(compare));
+a=[10,15,20,30,40,50,60,70];
+b=a.slice(0);
+target=50;
+a.sort();
+l=0;
+console.log(a,b);
+h=a.length-1;
+while(l<h){
+    if(a[l]+a[h]==target){
+        console.log(b.indexOf(a[l]),b.indexOf(a[h]));
+        break;
+    }
+    else if(a[l]+a[h]>target){
+        h--;
+    }
+    else{
+        l++;
+    }
+}
