@@ -156,6 +156,7 @@ var flatten = function(a, shallow,r){
   console.log(flatten([1, [2], [3, [[4]]],[5,6]]));
   
   console.log(flatten([1, [2], [3, [[4]]],[5,6]], true));
+//14
 let difference=(a1,a2)=>{
     ans=[]
     a1=a1.toString().split(",").map(Number);
@@ -175,6 +176,7 @@ let difference=(a1,a2)=>{
 console.log(difference([1, 2, 3], [100, 2, 1, 10]));
 console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
 console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+//15
 var library = [ 
     { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
     { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
