@@ -192,6 +192,7 @@ let compare=(x,y)=>{
     return 0;
 }
 console.log(library.sort(compare));
+//16
 a=[10,15,20,30,40,50,60,70];
 b=a.slice(0);
 target=50;
@@ -211,3 +212,27 @@ while(l<h){
         l++;
     }
 }
+//17
+let unzip = (k) => {
+    a = k[0]
+    b = k[1];
+    //console.log(a,b);
+    i=Math.min(a.length,b.length);
+    ans=[];
+    //console.log(ans);
+    j=0
+    while(i>0){
+        ans.push([a[j],b[j]]);
+        j+=1;
+        i-=1;
+    }
+    if(a.length>b.length){
+        ans.push([a[j]]);
+    }
+    else if(a.length<b.length){
+        ans.push([b[j]]);
+    }
+    return ans
+} 
+console.log(unzip([['a', 1, true], ['b', 2, false]]));
+console.log(unzip([['a', 1, true], ['b', 2]]));
